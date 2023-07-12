@@ -1,5 +1,22 @@
 <template>
+  <Header />
   <div class="home-container" style="margin-left: 253px">
+    <div>
+      <img src="../assets/banner.png" alt="" style="height: 104px" />
+    </div>
+    <h6
+      style="
+        color: #000;
+        text-align: left;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin-bottom: 20px;
+      "
+    >
+      MSI PS Series (20)
+    </h6>
     <div class="flex">
       <!-- Sidebar with filters -->
       <div style="width: 234px">
@@ -291,7 +308,7 @@
           <p class="compare-txt">You have no items to compare.</p>
         </div>
 
-        <div class="filter-container">
+        <div class="filter-container" style="height: 118.53px">
           <h4 class="filter-heading">My Wish List</h4>
           <p class="compare-txt">You have no items in your wish list.</p>
         </div>
@@ -348,12 +365,13 @@
             </div>
           </div>
         </div>
+
         <!-- Product listing -->
         <div class="flex flex-wrap">
           <div
             style="width: 200px"
             class="product-card"
-            v-for="(product, i) in filteredProducts"
+            v-for="(product, i) in paginatedFilteredProducts"
             :key="i"
           >
             <div class="stock">
@@ -422,6 +440,50 @@
             </div>
           </div>
         </div>
+
+        <!-- Pagination -->
+        <nav aria-label="Page navigation example" class="pagination-container">
+          <ul class="list-style-none flex">
+            <li>
+              <a
+                class="relative block rounded-full bg-transparent px-3 py-1.5 text-sm text-neutral-500 transition-all duration-300 dark:text-neutral-400"
+                @click="previousPage"
+                :class="{ 'pointer-events-none': currentPage === 1 }"
+                >{{ "<" }}</a
+              >
+            </li>
+            <template v-for="pageNumber in totalPageCount" :key="pageNumber">
+              <li
+                :class="{
+                  active: pageNumber === currentPage,
+                }"
+              >
+                <a
+                  class="relative block rounded-full bg-transparent px-3 py-1.5 text-sm transition-all duration-300"
+                  :class="[
+                    'text-neutral-600',
+                    {
+                      active: pageNumber === currentPage,
+                      'text-neutral-600 hover:bg-neutral-100 dark:text-white dark:hover:bg-neutral-700 dark:hover:text-white':
+                        pageNumber !== currentPage,
+                    },
+                  ]"
+                  @click="goToPage(pageNumber)"
+                  href="#!"
+                  >{{ pageNumber }}</a
+                >
+              </li>
+            </template>
+            <li>
+              <a
+                class="relative block rounded-full bg-transparent px-3 py-1.5 text-sm text-neutral-500 transition-all duration-300 dark:text-neutral-400"
+                @click="nextPage"
+                :class="{ 'pointer-events-none': currentPage === totalPageCount }"
+                >{{ ">" }}</a
+              >
+            </li>
+          </ul>
+        </nav>
       </div>
     </div>
   </div>
@@ -430,6 +492,10 @@
 <script>
 import { Collapse, initTE } from "tw-elements";
 initTE({ Collapse });
+
+import productsData from "@/products.json";
+
+import Header from "./header.vue";
 
 export default {
   data() {
@@ -480,132 +546,36 @@ export default {
           startRange: 7000,
         },
       ],
-      products: [
-        {
-          title: "MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On lorem",
-          category: 2,
-          oldPrice: 499,
-          newPrice: 499,
-          availability: 1,
-          reviews: 4,
-          rating: 3,
-        },
-        {
-          title: "MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On lorem",
-          category: 2,
-          oldPrice: 499,
-          newPrice: 499,
-          availability: 1,
-          reviews: 4,
-          rating: 4,
-        },
-        {
-          title: "MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On lorem",
-          category: 2,
-          oldPrice: 499,
-          newPrice: 499,
-          availability: 1,
-          reviews: 4,
-          rating: 4,
-        },
-        {
-          title: "MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On lorem",
-          category: 2,
-          oldPrice: 499,
-          newPrice: 499,
-          availability: 1,
-          reviews: 4,
-          rating: 4,
-        },
-        {
-          title: "MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On lorem",
-          category: 3,
-          oldPrice: 499,
-          newPrice: 499,
-          availability: 1,
-          reviews: 4,
-          rating: 4,
-        },
-        {
-          title: "MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On lorem",
-          category: 3,
-          oldPrice: 499,
-          newPrice: 499,
-          availability: 1,
-          reviews: 4,
-          rating: 4,
-        },
-        {
-          title: "MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On lorem",
-          category: 1,
-          oldPrice: 499,
-          newPrice: 499,
-          availability: 1,
-          reviews: 4,
-          rating: 4,
-        },
-        {
-          title: "MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On lorem",
-          category: 1,
-          oldPrice: 499,
-          newPrice: 499,
-          availability: 1,
-          reviews: 4,
-          rating: 4,
-        },
-        {
-          title: "MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On lorem",
-          category: 1,
-          oldPrice: 499,
-          newPrice: 499,
-          availability: 1,
-          reviews: 4,
-          rating: 4,
-        },
-        {
-          title: "MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On lorem",
-          category: 1,
-          oldPrice: 499,
-          newPrice: 499,
-          availability: 1,
-          reviews: 4,
-          rating: 4,
-        },
-        {
-          title: "MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On lorem",
-          category: 1,
-          oldPrice: 499,
-          newPrice: 499,
-          availability: 1,
-          reviews: 4,
-          rating: 4,
-        },
-        {
-          title: "MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On lorem",
-          category: 1,
-          oldPrice: 499,
-          newPrice: 499,
-          availability: 1,
-          reviews: 4,
-          rating: 4,
-        },
-        {
-          title: "MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On lorem",
-          category: 1,
-          oldPrice: 499,
-          newPrice: 499,
-          availability: 1,
-          reviews: 4,
-          rating: 4,
-        },
-      ],
+      products: productsData,
+      pageSize: 10, // number of products per page
+      currentPage: 1, // initial current page
     };
   },
-  name: "HelloWorld",
-  props: {
-    msg: String,
+  name: "HomeComponent",
+  components: {
+    Header,
   },
   computed: {
+    paginatedFilteredProducts() {
+      // Filter products based on selected categories
+      let filteredProducts = [];
+      if (this.selectedCategories.length === 0) {
+        filteredProducts = this.products;
+      } else {
+        filteredProducts = this.products.filter((product) => {
+          return this.selectedCategories.some(
+            (category) => category.id === product.category
+          );
+        });
+      }
+
+      // Calculate start and end indexes for the current page
+      const startIndex = (this.currentPage - 1) * this.pageSize;
+      const endIndex = startIndex + this.pageSize;
+
+      // Return a subset of products based on the current page and page size
+      return filteredProducts.slice(startIndex, endIndex);
+    },
     filteredProducts() {
       if (this.selectedCategories.length === 0) {
         return this.products;
@@ -616,6 +586,10 @@ export default {
           );
         });
       }
+    },
+    totalPageCount() {
+      // Calculate the total number of pages based on the products array and page size
+      return Math.ceil(this.filteredProducts.length / this.pageSize);
     },
   },
   methods: {
@@ -646,6 +620,22 @@ export default {
     },
     clearFilters() {
       this.clearAll();
+    },
+    goToPage(pageNumber) {
+      // Update the current page when a page number is clicked
+      this.currentPage = pageNumber;
+    },
+    previousPage() {
+      // Go to the previous page
+      if (this.currentPage > 1) {
+        this.currentPage--;
+      }
+    },
+    nextPage() {
+      // Go to the next page
+      if (this.currentPage < this.totalPageCount) {
+        this.currentPage++;
+      }
     },
   },
 };
@@ -879,5 +869,36 @@ export default {
   flex-shrink: 0;
   width: 203.163px;
   margin: auto;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination-container .li a {
+  color: var(--color-5, #a2a6b0);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.pagination-container li {
+  border: 2px solid var(--color-5, #a2a6b0);
+  border-radius: 50px;
+  display: inline-flex;
+  padding: 8px 16px;
+  align-items: center;
+  gap: 10px;
+  margin-right: 10px;
+}
+
+.active {
+  background: var(--color-1, #f5f7ff);
+  border: none !important;
+  color: var(--color-7, #000) !important;
 }
 </style>
