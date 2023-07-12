@@ -1,6 +1,6 @@
 <template>
   <Header />
-  <div class="home-container" style="margin-left: 253px">
+  <div class="home-container">
     <div>
       <img src="../assets/banner.png" alt="" style="height: 104px" />
     </div>
@@ -25,7 +25,7 @@
           <button type="button" class="clear-filters" @click="clearFilters()">
             Clear Filter
           </button>
-          <div id="filterAccordion">
+          <div>
             <!-- Category filter -->
             <div class="rounded-t-lg">
               <h2 class="mb-0 filter-header" id="headingOne">
@@ -92,9 +92,8 @@
                   style="box-shadow: none"
                   type="button"
                   data-te-collapse-init
-                  data-te-collapse-collapsed
                   data-te-target="#collapseTwo"
-                  aria-expanded="false"
+                  aria-expanded="true"
                   aria-controls="collapseTwo"
                 >
                   Price
@@ -120,14 +119,25 @@
               </h2>
               <div
                 id="collapseTwo"
-                class="!visible hidden"
+                class="!visible"
                 data-te-collapse-item
+                data-te-collapse-show
                 aria-labelledby="headingTwo"
                 data-te-parent="#filterAccordion"
               >
                 <div class="px-5 py-4">
                   <div v-for="(price, i) in prices" :key="i" class="flex">
-                    <p class="category-title">
+                    <p
+                      class="category-title"
+                      :style="{
+                        color:
+                          selectedPrice && selectedPrice.startRange === price.startRange
+                            ? 'var(--color-3)'
+                            : '',
+                      }"
+                      style="cursor: pointer"
+                      @click="filterByPrice(price)"
+                    >
                       {{
                         price.startRange || price.startRange === 0
                           ? "$" +
@@ -147,7 +157,9 @@
                           : " And Above"
                       }}
                     </p>
-                    <span style="margin-left: auto" class="category-count">(15)</span>
+                    <span style="margin-left: auto" class="category-count"
+                      >({{ getPriceCount(price) }})</span
+                    >
                   </div>
                 </div>
               </div>
@@ -161,9 +173,8 @@
                   style="box-shadow: none"
                   type="button"
                   data-te-collapse-init
-                  data-te-collapse-collapsed
                   data-te-target="#collapseThree"
-                  aria-expanded="false"
+                  aria-expanded="true"
                   aria-controls="collapseThree"
                 >
                   Color
@@ -189,8 +200,9 @@
               </h2>
               <div
                 id="collapseThree"
-                class="!visible hidden"
+                class="!visible"
                 data-te-collapse-item
+                data-te-collapse-show
                 aria-labelledby="headingThree"
                 data-te-parent="#filterAccordion"
               >
@@ -229,7 +241,6 @@
                   style="box-shadow: none"
                   type="button"
                   data-te-collapse-init
-                  data-te-collapse-collapsed
                   data-te-target="#collapseFour"
                   aria-expanded="false"
                   aria-controls="collapseFour"
@@ -257,8 +268,9 @@
               </h2>
               <div
                 id="collapseFour"
-                class="!visible hidden"
+                class="!visible"
                 data-te-collapse-item
+                data-te-collapse-show
                 aria-labelledby="headingFour"
                 data-te-parent="#filterAccordion"
               >
@@ -491,7 +503,6 @@
 
 <script>
 import { Collapse, initTE } from "tw-elements";
-initTE({ Collapse });
 
 import productsData from "@/products.json";
 
@@ -502,6 +513,7 @@ export default {
     return {
       selectedCategories: [],
       selectedColor: "",
+      selectedPrice: null,
       categories: [
         {
           id: 1,
@@ -555,35 +567,38 @@ export default {
   components: {
     Header,
   },
+  mounted() {
+    initTE({ Collapse });
+  },
   computed: {
     paginatedFilteredProducts() {
-      // Filter products based on selected categories
-      let filteredProducts = [];
-      if (this.selectedCategories.length === 0) {
-        filteredProducts = this.products;
-      } else {
-        filteredProducts = this.products.filter((product) => {
-          return this.selectedCategories.some(
-            (category) => category.id === product.category
-          );
-        });
-      }
-
       // Calculate start and end indexes for the current page
       const startIndex = (this.currentPage - 1) * this.pageSize;
       const endIndex = startIndex + this.pageSize;
 
       // Return a subset of products based on the current page and page size
-      return filteredProducts.slice(startIndex, endIndex);
+      return this.filteredProducts.slice(startIndex, endIndex);
     },
     filteredProducts() {
-      if (this.selectedCategories.length === 0) {
+      if (this.selectedCategories.length === 0 && !this.selectedPrice) {
+        // If no categories or price range are selected, return all products
         return this.products;
       } else {
+        // Apply filtering based on selected categories and price range
         return this.products.filter((product) => {
-          return this.selectedCategories.some(
-            (category) => category.id === product.category
-          );
+          const matchCategory =
+            this.selectedCategories.length === 0 ||
+            this.selectedCategories.some((category) => category.id === product.category);
+
+          const matchPrice =
+            !this.selectedPrice ||
+            ((this.selectedPrice.startRange || this.selectedPrice.startRange === 0) &&
+              product.newPrice >= this.selectedPrice.startRange &&
+              (!this.selectedPrice.endRange ||
+                product.newPrice < this.selectedPrice.endRange));
+
+          // Return true if the product matches the selected categories and price range
+          return matchCategory && matchPrice;
         });
       }
     },
@@ -593,6 +608,26 @@ export default {
     },
   },
   methods: {
+    getPriceCount(price) {
+      const count = this.products.filter((product) => {
+        if (price.startRange || price.startRange === 0) {
+          if (product.newPrice >= price.startRange) {
+            if (price.endRange) {
+              return product.newPrice < price.endRange;
+            }
+            return true;
+          }
+        } else if (price.endRange) {
+          return product.newPrice < price.endRange;
+        }
+        return false;
+      }).length;
+
+      return count;
+    },
+    filterByPrice(price) {
+      this.selectedPrice = price;
+    },
     getProductCount(categoryId) {
       const productsArr = this.products.filter((item) => item.category === categoryId);
       return productsArr.length;
@@ -620,6 +655,7 @@ export default {
     },
     clearFilters() {
       this.clearAll();
+      this.selectedPrice = null;
     },
     goToPage(pageNumber) {
       // Update the current page when a page number is clicked
@@ -677,8 +713,8 @@ export default {
   justify-content: center;
   align-items: center;
   border-radius: 50px;
-  border: 2px solid var(--color-5, #a2a6b0);
-  color: var(--color-5, #a2a6b0);
+  border: 2px solid var(--color-5);
+  color: var(--color-5);
   text-align: center;
   font-family: Poppins;
   font-size: 14px;
@@ -717,7 +753,7 @@ export default {
 }
 
 .review-text {
-  color: var(--color-5, #a2a6b0);
+  color: var(--color-5);
   text-align: center;
   font-size: 12px;
   font-style: normal;
@@ -793,7 +829,7 @@ export default {
   margin-bottom: 5px;
   margin-right: 5px;
   border-radius: 2px;
-  border: 1px solid var(--color-6, #cacdd8);
+  border: 1px solid var(--color-6);
   background: #fff;
   width: auto;
   height: 38px;
@@ -831,7 +867,7 @@ export default {
   justify-content: center;
   align-items: center;
   border-radius: 50px;
-  background: var(--color-3, #0156ff);
+  background: var(--color-3);
   color: #fff;
   text-align: center;
   font-family: Poppins;
@@ -877,7 +913,7 @@ export default {
 }
 
 .pagination-container .li a {
-  color: var(--color-5, #a2a6b0);
+  color: var(--color-5);
   text-align: center;
   font-family: Poppins;
   font-size: 13px;
@@ -887,7 +923,7 @@ export default {
 }
 
 .pagination-container li {
-  border: 2px solid var(--color-5, #a2a6b0);
+  border: 2px solid var(--color-5);
   border-radius: 50px;
   display: inline-flex;
   padding: 8px 16px;
@@ -897,8 +933,13 @@ export default {
 }
 
 .active {
-  background: var(--color-1, #f5f7ff);
+  background: var(--color-1);
   border: none !important;
-  color: var(--color-7, #000) !important;
+  color: var(--color-7) !important;
+}
+
+.home-container {
+  width: 95%;
+  margin: auto;
 }
 </style>

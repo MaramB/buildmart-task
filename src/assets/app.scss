@@ -1,0 +1,15 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/tailwind';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --color-1: #f5f7ff;
+    --color-3: #3366FF;
+    --color-5: #a2a6b0;
+    --color-6: #cacdd8;
+    --color-7: #000;
+}
