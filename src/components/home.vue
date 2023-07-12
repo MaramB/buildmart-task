@@ -795,8 +795,8 @@
         </nav>
       </div>
     </div>
-
-    <div class="info flex">
+  </div>
+  <div class="info flex">
       <div class="info-container">
         <div class="info-icon">
           <svg
@@ -908,7 +908,6 @@
         </p>
       </div>
     </div>
-  </div>
   <Footer />
 </template>
 
