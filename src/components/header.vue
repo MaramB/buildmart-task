@@ -51,7 +51,7 @@
 
         <!-- Collapsible navigation container -->
         <div
-          style="margin-left: 253px"
+          
           class="!visible hidden flex-grow basis-[100%] items-center lg:!flex lg:basis-auto"
           id="navbarSupportedContent12"
           data-te-collapse-item
@@ -150,7 +150,7 @@
         </div>
 
         <!-- Right elements -->
-        <div class="relative flex items-center">
+        <div class="relative flex items-center" style="margin-right: 4%;">
           <!-- Search Icon -->
           <a
             class="mr-4 text-secondary-500 transition duration-200 hover:text-secondary-400 hover:ease-in-out focus:text-secondary-400 disabled:text-black/30 motion-reduce:transition-none"
@@ -268,16 +268,18 @@
 <script>
 import { Collapse, Dropdown, initTE } from "tw-elements";
 
-initTE({ Collapse, Dropdown });
 export default {
   data() {
     return {};
+  },
+  mounted() {
+    initTE({ Collapse, Dropdown });
   },
   name: "headerComponent",
 };
 </script>
 
-<style lang="css" scoped>
+<style lang="scss" scoped>
 .black-header {
   height: 44px;
   background: #020202;
@@ -285,19 +287,19 @@ export default {
 
 .heading1 {
   display: flex;
-  width: 184px;
+  // width: 184px;
   height: 44px;
   flex-direction: column;
   justify-content: center;
-  margin-left: 253px;
-}
-
-.heading1 p {
-  color: #a2a6b0;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
+  margin-left: 25px;
+  // margin-left: 253px;
+  p {
+    color: #a2a6b0;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
 }
 
 .heading2 {
@@ -317,20 +319,19 @@ export default {
 li {
   display: flex;
   align-items: center;
-}
-
-li a {
-  color: #000;
-  text-align: center;
-  font-family: Poppins;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
+  a {
+    color: #000;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
 }
 
 .cart-count {
-  background: #0156ff;
+  background: var(--color-3);
   width: 16px;
   height: 16px;
   color: #fff;
@@ -343,12 +344,12 @@ li a {
 
 .our-deals {
   border-radius: 50px;
-  border: 2px solid var(--color-3, #0156ff);
+  border: 2px solid var(--color-3);
   display: inline-flex;
   padding: 8px 26px;
   align-items: center;
   gap: 10px;
-  color: var(--color-3, #0156ff);
+  color: var(--color-3);
   text-align: center;
   font-size: 14px;
   font-style: normal;
