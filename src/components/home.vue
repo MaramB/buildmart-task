@@ -73,20 +73,20 @@
                 >
                   Category
                   <span
-                    class="ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300"
+                    class="ml-auto h-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
                       fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="h-6 w-6"
                     >
                       <path
+                        d="M10 7L8 9L6 7"
+                        stroke="black"
+                        stroke-width="1.6"
                         stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M19.5 8.25l-7.5 7.5-7.5-7.5"
                       />
                     </svg>
                   </span>
@@ -131,20 +131,20 @@
                 >
                   Price
                   <span
-                    class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300"
+                    class="-mr-1 ml-auto h-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
                       fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="h-6 w-6"
                     >
                       <path
+                        d="M10 7L8 9L6 7"
+                        stroke="black"
+                        stroke-width="1.6"
                         stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M19.5 8.25l-7.5 7.5-7.5-7.5"
                       />
                     </svg>
                   </span>
@@ -212,20 +212,20 @@
                 >
                   Color
                   <span
-                    class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300"
+                    class="-mr-1 ml-auto h-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
                       fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="h-6 w-6"
                     >
                       <path
+                        d="M10 7L8 9L6 7"
+                        stroke="black"
+                        stroke-width="1.6"
                         stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M19.5 8.25l-7.5 7.5-7.5-7.5"
                       />
                     </svg>
                   </span>
@@ -280,20 +280,20 @@
                 >
                   Filter Name
                   <span
-                    class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300"
+                    class="-mr-1 ml-auto h-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
                       fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="h-6 w-6"
                     >
                       <path
+                        d="M10 7L8 9L6 7"
+                        stroke="black"
+                        stroke-width="1.6"
                         stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M19.5 8.25l-7.5 7.5-7.5-7.5"
                       />
                     </svg>
                   </span>
@@ -797,117 +797,117 @@
     </div>
   </div>
   <div class="info flex">
-      <div class="info-container">
-        <div class="info-icon">
+    <div class="info-container">
+      <div class="info-icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="65"
+          height="65"
+          viewBox="0 0 65 65"
+          fill="none"
+        >
+          <circle cx="32.5" cy="32.5" r="32.5" fill="#0156FF" />
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="65"
-            height="65"
-            viewBox="0 0 65 65"
+            width="30"
+            height="31"
+            viewBox="0 0 30 31"
             fill="none"
+            x="17.5"
+            y="17"
           >
+            <path
+              d="M14.9121 3.39246C8.10683 3.39246 2.57031 8.92898 2.57031 15.7342V20.8474C2.57031 22.1112 3.67737 23.1393 5.03867 23.1393H6.27284C6.60017 23.1393 6.91409 23.0093 7.14554 22.7778C7.37699 22.5464 7.50702 22.2324 7.50702 21.9051V15.5577C7.50702 15.2304 7.37699 14.9165 7.14554 14.685C6.91409 14.4536 6.60017 14.3236 6.27284 14.3236H5.15221C5.83841 9.5473 9.94823 5.86081 14.9121 5.86081C19.8759 5.86081 23.9858 9.5473 24.672 14.3236H23.5513C23.224 14.3236 22.9101 14.4536 22.6786 14.685C22.4472 14.9165 22.3172 15.2304 22.3172 15.5577V23.1393C22.3172 24.5006 21.2101 25.6076 19.8488 25.6076H17.3804V24.3735H12.4437V28.076H19.8488C22.5714 28.076 24.7855 25.8619 24.7855 23.1393C26.1468 23.1393 27.2539 22.1112 27.2539 20.8474V15.7342C27.2539 8.92898 21.7173 3.39246 14.9121 3.39246Z"
+              fill="white"
+            />
+          </svg>
+        </svg>
+      </div>
+
+      <p class="info-title">Product Support</p>
+
+      <p class="info-description">
+        Up to 3 years on-site warranty available for your peace of mind.
+      </p>
+    </div>
+
+    <div class="info-container">
+      <div class="info-icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="65"
+          height="65"
+          viewBox="0 0 65 65"
+          fill="none"
+        >
+          <g>
             <circle cx="32.5" cy="32.5" r="32.5" fill="#0156FF" />
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="30"
-              height="31"
-              viewBox="0 0 30 31"
+              height="30"
+              viewBox="0 0 30 30"
               fill="none"
               x="17.5"
-              y="17"
+              y="17.5"
             >
               <path
-                d="M14.9121 3.39246C8.10683 3.39246 2.57031 8.92898 2.57031 15.7342V20.8474C2.57031 22.1112 3.67737 23.1393 5.03867 23.1393H6.27284C6.60017 23.1393 6.91409 23.0093 7.14554 22.7778C7.37699 22.5464 7.50702 22.2324 7.50702 21.9051V15.5577C7.50702 15.2304 7.37699 14.9165 7.14554 14.685C6.91409 14.4536 6.60017 14.3236 6.27284 14.3236H5.15221C5.83841 9.5473 9.94823 5.86081 14.9121 5.86081C19.8759 5.86081 23.9858 9.5473 24.672 14.3236H23.5513C23.224 14.3236 22.9101 14.4536 22.6786 14.685C22.4472 14.9165 22.3172 15.2304 22.3172 15.5577V23.1393C22.3172 24.5006 21.2101 25.6076 19.8488 25.6076H17.3804V24.3735H12.4437V28.076H19.8488C22.5714 28.076 24.7855 25.8619 24.7855 23.1393C26.1468 23.1393 27.2539 22.1112 27.2539 20.8474V15.7342C27.2539 8.92898 21.7173 3.39246 14.9121 3.39246Z"
+                d="M17.82 27.18L15 30L12.18 27.18C6.6375 25.9 2.5 20.93 2.5 15C2.5 8.1 8.1 2.5 15 2.5C21.9 2.5 27.5 8.1 27.5 15C27.5 20.93 23.3625 25.9 17.82 27.18ZM7.52875 19.27C9.36375 22.0075 12.1187 23.75 15.2 23.75C18.28 23.75 21.0362 22.0088 22.87 19.27C20.7897 17.3257 18.0474 16.246 15.2 16.25C12.3521 16.2457 9.60939 17.3255 7.52875 19.27ZM15 13.75C15.9946 13.75 16.9484 13.3549 17.6517 12.6517C18.3549 11.9484 18.75 10.9946 18.75 10C18.75 9.00544 18.3549 8.05161 17.6517 7.34835C16.9484 6.64509 15.9946 6.25 15 6.25C14.0054 6.25 13.0516 6.64509 12.3483 7.34835C11.6451 8.05161 11.25 9.00544 11.25 10C11.25 10.9946 11.6451 11.9484 12.3483 12.6517C13.0516 13.3549 14.0054 13.75 15 13.75Z"
                 fill="white"
               />
             </svg>
-          </svg>
-        </div>
-
-        <p class="info-title">Product Support</p>
-
-        <p class="info-description">
-          Up to 3 years on-site warranty available for your peace of mind.
-        </p>
+          </g>
+        </svg>
       </div>
 
-      <div class="info-container">
-        <div class="info-icon">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="65"
-            height="65"
-            viewBox="0 0 65 65"
-            fill="none"
-          >
-            <g>
-              <circle cx="32.5" cy="32.5" r="32.5" fill="#0156FF" />
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="30"
-                height="30"
-                viewBox="0 0 30 30"
-                fill="none"
-                x="17.5"
-                y="17.5"
-              >
+      <p class="info-title">Personal Account</p>
+
+      <p class="info-description">
+        With big discounts, free delivery and a dedicated support specialist.
+      </p>
+    </div>
+
+    <div class="info-container">
+      <div class="info-icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="65"
+          height="65"
+          viewBox="0 0 65 65"
+          fill="none"
+        >
+          <circle cx="32.5" cy="32.5" r="32.5" fill="#0156FF" />
+          <foreignObject width="26" height="26" x="19.8" y="19.8">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="26"
+              height="26"
+              viewBox="0 0 26 26"
+              fill="none"
+            >
+              <g clip-path="url(#clip0_1513_1494)">
                 <path
-                  d="M17.82 27.18L15 30L12.18 27.18C6.6375 25.9 2.5 20.93 2.5 15C2.5 8.1 8.1 2.5 15 2.5C21.9 2.5 27.5 8.1 27.5 15C27.5 20.93 23.3625 25.9 17.82 27.18ZM7.52875 19.27C9.36375 22.0075 12.1187 23.75 15.2 23.75C18.28 23.75 21.0362 22.0088 22.87 19.27C20.7897 17.3257 18.0474 16.246 15.2 16.25C12.3521 16.2457 9.60939 17.3255 7.52875 19.27ZM15 13.75C15.9946 13.75 16.9484 13.3549 17.6517 12.6517C18.3549 11.9484 18.75 10.9946 18.75 10C18.75 9.00544 18.3549 8.05161 17.6517 7.34835C16.9484 6.64509 15.9946 6.25 15 6.25C14.0054 6.25 13.0516 6.64509 12.3483 7.34835C11.6451 8.05161 11.25 9.00544 11.25 10C11.25 10.9946 11.6451 11.9484 12.3483 12.6517C13.0516 13.3549 14.0054 13.75 15 13.75Z"
+                  d="M25.2047 0.526524C25.1293 0.33869 24.9844 0.187163 24.8001 0.103468C24.6158 0.019772 24.4063 0.0103515 24.2152 0.0771657C24.0242 0.14398 23.8662 0.281885 23.7742 0.462191C23.6823 0.642497 23.6633 0.851322 23.7214 1.04522C24.9291 4.51622 22.5319 7.10842 20.7041 8.49682L19.9657 7.43862C19.7174 7.08372 19.1623 6.78862 18.7307 6.78342L14.5863 6.80162C14.08 6.81691 13.5873 6.96873 13.1602 7.24102L0.948006 15.8041C0.663949 16.004 0.470671 16.3083 0.410489 16.6504C0.350307 16.9925 0.428126 17.3445 0.626906 17.6293L6.17661 25.5697C6.59261 26.1612 7.25691 26.0897 7.84971 25.6763L20.0619 17.1119C20.4129 16.8636 20.8185 16.328 20.9615 15.9185L22.2589 11.83C22.4019 11.4218 22.3148 10.7991 22.0665 10.4442L21.6167 9.79942C24.0711 7.91832 26.6191 4.59422 25.2047 0.526524ZM19.5224 12.6919C19.2974 12.8494 19.0436 12.961 18.7755 13.0204C18.5074 13.0797 18.2302 13.0857 17.9597 13.0379C17.6893 12.9901 17.431 12.8894 17.1994 12.7418C16.9679 12.5941 16.7678 12.4022 16.6104 12.1771C16.2918 11.7217 16.1669 11.1584 16.2632 10.611C16.3595 10.0636 16.669 9.57674 17.1239 9.25732C17.4805 9.00748 17.9063 8.87531 18.3416 8.87927C18.777 8.88323 19.2003 9.02314 19.5523 9.27942C19.1987 9.49262 18.9556 9.61742 18.9101 9.63692C18.749 9.71376 18.6187 9.84305 18.5406 10.0036C18.4626 10.1642 18.4414 10.3465 18.4805 10.5207C18.5196 10.6949 18.6168 10.8506 18.756 10.9624C18.8952 11.0741 19.0683 11.1353 19.2468 11.1358C19.3586 11.1358 19.473 11.1098 19.5809 11.0591C19.8331 10.9395 20.1035 10.7978 20.3856 10.6301C20.4505 11.0202 20.4039 11.4207 20.2512 11.7854C20.0985 12.1502 19.8459 12.4644 19.5224 12.6919Z"
                   fill="white"
                 />
-              </svg>
-            </g>
-          </svg>
-        </div>
-
-        <p class="info-title">Personal Account</p>
-
-        <p class="info-description">
-          With big discounts, free delivery and a dedicated support specialist.
-        </p>
+              </g>
+              <defs>
+                <clipPath id="clip0_1513_1494">
+                  <rect width="26" height="26" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </foreignObject>
+        </svg>
       </div>
 
-      <div class="info-container">
-        <div class="info-icon">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="65"
-            height="65"
-            viewBox="0 0 65 65"
-            fill="none"
-          >
-            <circle cx="32.5" cy="32.5" r="32.5" fill="#0156FF" />
-            <foreignObject width="26" height="26" x="19.8" y="19.8">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="26"
-                height="26"
-                viewBox="0 0 26 26"
-                fill="none"
-              >
-                <g clip-path="url(#clip0_1513_1494)">
-                  <path
-                    d="M25.2047 0.526524C25.1293 0.33869 24.9844 0.187163 24.8001 0.103468C24.6158 0.019772 24.4063 0.0103515 24.2152 0.0771657C24.0242 0.14398 23.8662 0.281885 23.7742 0.462191C23.6823 0.642497 23.6633 0.851322 23.7214 1.04522C24.9291 4.51622 22.5319 7.10842 20.7041 8.49682L19.9657 7.43862C19.7174 7.08372 19.1623 6.78862 18.7307 6.78342L14.5863 6.80162C14.08 6.81691 13.5873 6.96873 13.1602 7.24102L0.948006 15.8041C0.663949 16.004 0.470671 16.3083 0.410489 16.6504C0.350307 16.9925 0.428126 17.3445 0.626906 17.6293L6.17661 25.5697C6.59261 26.1612 7.25691 26.0897 7.84971 25.6763L20.0619 17.1119C20.4129 16.8636 20.8185 16.328 20.9615 15.9185L22.2589 11.83C22.4019 11.4218 22.3148 10.7991 22.0665 10.4442L21.6167 9.79942C24.0711 7.91832 26.6191 4.59422 25.2047 0.526524ZM19.5224 12.6919C19.2974 12.8494 19.0436 12.961 18.7755 13.0204C18.5074 13.0797 18.2302 13.0857 17.9597 13.0379C17.6893 12.9901 17.431 12.8894 17.1994 12.7418C16.9679 12.5941 16.7678 12.4022 16.6104 12.1771C16.2918 11.7217 16.1669 11.1584 16.2632 10.611C16.3595 10.0636 16.669 9.57674 17.1239 9.25732C17.4805 9.00748 17.9063 8.87531 18.3416 8.87927C18.777 8.88323 19.2003 9.02314 19.5523 9.27942C19.1987 9.49262 18.9556 9.61742 18.9101 9.63692C18.749 9.71376 18.6187 9.84305 18.5406 10.0036C18.4626 10.1642 18.4414 10.3465 18.4805 10.5207C18.5196 10.6949 18.6168 10.8506 18.756 10.9624C18.8952 11.0741 19.0683 11.1353 19.2468 11.1358C19.3586 11.1358 19.473 11.1098 19.5809 11.0591C19.8331 10.9395 20.1035 10.7978 20.3856 10.6301C20.4505 11.0202 20.4039 11.4207 20.2512 11.7854C20.0985 12.1502 19.8459 12.4644 19.5224 12.6919Z"
-                    fill="white"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_1513_1494">
-                    <rect width="26" height="26" fill="white" />
-                  </clipPath>
-                </defs>
-              </svg>
-            </foreignObject>
-          </svg>
-        </div>
+      <p class="info-title">Amazing Savings</p>
 
-        <p class="info-title">Amazing Savings</p>
-
-        <p class="info-description">
-          Up to 70% off new Products, you can be sure of the best price.
-        </p>
-      </div>
+      <p class="info-description">
+        Up to 70% off new Products, you can be sure of the best price.
+      </p>
     </div>
+  </div>
   <Footer />
 </template>
 
@@ -978,7 +978,7 @@ export default {
   name: "HomeComponent",
   components: {
     Header,
-    Footer
+    Footer,
   },
   mounted() {
     initTE({ Collapse, Dropdown, Ripple });
@@ -1408,9 +1408,10 @@ export default {
 
 .info {
   background: var(--color-1);
-  height: 273px;
+  height: auto;
   justify-content: center;
   gap: 100px;
+  padding: 100px 0;
 }
 
 .info-container {
@@ -1445,5 +1446,13 @@ export default {
   font-style: normal;
   font-weight: 400;
   line-height: 140%;
+}
+
+.group {
+  color: #000 !important;
+  font-size: 14px !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  line-height: normal !important;
 }
 </style>
