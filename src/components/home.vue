@@ -1,5 +1,21 @@
 <template>
+<Header />
   <div class="home-container" style="margin-left: 253px">
+  <div>
+  <img src="../assets/banner.png" alt="" style="height: 104px;"></div>
+    <h6
+      style="
+        color: #000;
+        text-align: left;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin-bottom: 20px
+      "
+    >
+      MSI PS Series (20)
+    </h6>
     <div class="flex">
       <!-- Sidebar with filters -->
       <div style="width: 234px">
@@ -291,7 +307,7 @@
           <p class="compare-txt">You have no items to compare.</p>
         </div>
 
-        <div class="filter-container">
+        <div class="filter-container" style="height: 118.53px;">
           <h4 class="filter-heading">My Wish List</h4>
           <p class="compare-txt">You have no items in your wish list.</p>
         </div>
@@ -430,6 +446,8 @@
 <script>
 import { Collapse, initTE } from "tw-elements";
 initTE({ Collapse });
+
+import Header from './header.vue';
 
 export default {
   data() {
@@ -601,9 +619,9 @@ export default {
       ],
     };
   },
-  name: "HelloWorld",
-  props: {
-    msg: String,
+  name: "HomeComponent",
+  components: {
+    Header
   },
   computed: {
     filteredProducts() {
