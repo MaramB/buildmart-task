@@ -175,7 +175,7 @@
           </a>
 
           <!-- Container with two dropdown menus -->
-          <div class="relative" data-te-dropdown-ref>
+          <div class="relative" data-te-dropdown1-ref>
             <!-- First dropdown trigger -->
             <a
               class="hidden-arrow mr-4 flex items-center text-secondary-500 transition duration-200 hover:text-secondary-400 hover:ease-in-out focus:text-secondary-400 disabled:text-black/30 motion-reduce:transition-none"
@@ -266,14 +266,14 @@
 </template>
 
 <script>
-import { Collapse, Dropdown, initTE } from "tw-elements";
+// import { Collapse, Dropdown, initTE } from "tw-elements";
 
 export default {
   data() {
     return {};
   },
   mounted() {
-    initTE({ Collapse, Dropdown });
+    // initTE({ Collapse, Dropdown });
   },
   name: "headerComponent",
 };
