@@ -909,6 +909,7 @@
       </div>
     </div>
   </div>
+  <Footer />
 </template>
 
 <script>
@@ -917,6 +918,7 @@ import { Collapse, Dropdown, Ripple, initTE } from "tw-elements";
 import productsData from "@/products.json";
 
 import Header from "./header.vue";
+import Footer from "./footer.vue";
 
 export default {
   data() {
@@ -977,6 +979,7 @@ export default {
   name: "HomeComponent",
   components: {
     Header,
+    Footer
   },
   mounted() {
     initTE({ Collapse, Dropdown, Ripple });
